@@ -16,8 +16,10 @@
 }
 
 body {
-    font-family: Roboto, sans-serif;
-    color: #212121;
+    font-family:var(--main-font);
+    color: var(--main-txt-color);
+    font-size: 14px;
+    letter-spacing: 0.03em;
 }
 ul {
     list-style: none;
@@ -31,7 +33,6 @@ ul {
     text-decoration: none;
     font-family: var(--secondary-font);
     color: var(--accent-txt-color);
-    font-style: normal;
     font-weight: 700;
     font-size: 26px;
     line-height: calc(31 / 26);
@@ -47,7 +48,6 @@ ul {
     text-decoration: none;
     color: var(--main-txt-color);
     font-weight: 500;
-    font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
 }
@@ -59,9 +59,7 @@ ul {
     /*Контакти хедера*/
 .contact-links .link {
     text-decoration: none;
-    font-style: normal;
     font-weight: 500;
-    font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
     color: #757575;
@@ -77,20 +75,18 @@ ul {
 }
 
 .hero-title {
-    font-style: normal;
     font-weight: 900;
     font-size: 44px;
     line-height: calc(60 / 44);
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--light-txt-color);
 }
 .btn {
     background: #2196F3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);*/
     border-radius: 4px;
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: calc(30 / 16);
@@ -98,12 +94,21 @@ ul {
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    color: #FFFFFF;
+    color: var(--light-txt-color);
     cursor: pointer;
 }
+.btn:hover,
+.btn:focus {
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
     /*Про нас*/
-.caption .text{
-    font-style: normal;
+.visualli-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+.caption .text {
     font-weight: 700;
     font-size: 14px;
     line-height: calc(16 / 14);
@@ -116,7 +121,6 @@ ul {
     color: #757575;
 }
 .subject {
-    font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: calc(42 / 36);
@@ -128,7 +132,6 @@ ul {
     background: #F5F4FA;
 }
 .heading {
-    font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: calc(42 / 36);
@@ -136,13 +139,12 @@ ul {
     letter-spacing: 0.03em;
 }
 .team-item {
-    background: #FFFFFF;
+    background:#FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
 .heading-subtitle{
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: calc(19 / 16);
@@ -150,7 +152,6 @@ ul {
     letter-spacing: 0.03em;
 }
 .desk {
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: calc(19 / 16);
@@ -163,26 +164,24 @@ ul {
     background: #2F303A;
 }
 .logo-footer {
-    color: #FFFFFF;
+    color: var(--light-txt-color);
     font-family: var(--secondary-font);
 }
 .address-list {
+    font-style: normal;
     text-decoration: none;
 }
 .address-link {
     text-decoration: none;
-    font-style: normal;
     font-weight: 400;
-    font-size: 14px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
-    color: #FFFFFF;
+    color:var(--light-txt-color);
 }
 .contact-link {
-    text-decoration: none;
     font-style: normal;
+    text-decoration: none;
     font-weight: 400;
-    font-size: 14px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
@@ -199,13 +198,12 @@ ul {
 /*portfolio.html*/
 
 .header {
-    background: #FFFFFF
+    background: #FFFFFF;
 }
 .section {
     color: #F5F5F5;
 }
 .section-btn-list {
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: calc(26 / 16);
@@ -216,6 +214,10 @@ ul {
     border: none;
     background: #F5F4FA;
     border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    cursor: pointer;
 }
 .section-btn:hover,
 .section-btn:focus {
@@ -228,7 +230,7 @@ ul {
     background: #FFFFFF;
     border: 1px solid #EEEEEE;
 }
-.caption {
+.main-caption {
     text-transform: capitalize;
     font-weight: 700;
     font-size: 18px;
@@ -246,10 +248,9 @@ ul {
     text-transform: uppercase;
 }
 .desc {
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 30px;
+    line-height: calc(30 / 16);
     letter-spacing: 0.03em;
     color: #757575;
 }
